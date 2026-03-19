@@ -24,7 +24,7 @@ class EventSubscriber(Node):
         super().__init__('event_subscriber')
         self.subscription = self.create_subscription(
             String,
-            'topic',
+            '/event_topic',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
