@@ -15,8 +15,8 @@ setup(
     zip_safe=True,
     maintainer='javid',
     maintainer_email='jmustafa2011@hotmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Basic package for using the RPG/SRL Event Camera Tactile Sensor',
+    license='Apache License 2.0',
     extras_require={
         'test': [
             'pytest',
@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'event_talker = sensor_system.event_publisher_node:main',
+            'event_listener = sensor_system.event_subscriber_node:main',
         ],
     },
 )
